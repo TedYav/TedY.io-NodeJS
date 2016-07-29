@@ -1,15 +1,17 @@
 # humanstxt.org/
-# The humans responsible & technology colophon
+# The humans responsible & technology
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+	Developed by: Ted Yavuzkurt
+	Contact: teoman DOT david AT gmail.com
+	From: Pennsylvania
 
 # THANKS
 
-    <name>
+    Kriasoft for the React Starter Kit
 
-# TECHNOLOGY COLOPHON
+# TECHNOLOGY STACK
 
     CSS3, HTML5, JavaScript
     React, Flux, SuperAgent

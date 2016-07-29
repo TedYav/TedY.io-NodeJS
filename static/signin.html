@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+
+	<title>Sign in - Progressus Bootstrap template</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200,400,600|Open+Sans:300,400,700">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body class="page-signin">
+
+	<section class="section section-signin">
+
+		<p class="text-center"><a href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a></p>
+
+		<div class="panel panel-default">
+			<div class="panel-body" role="tabpanel">
+
+				<!-- forms container -->
+				<div class="tab-content">
+
+					<!-- sign in -->
+					<div role="tabpanel" class="tab-pane active" id="do-signin">
+						<h3 class="text-center">Sign in</h3>
+						<p class="text-center">
+							<br>
+							Please use the form below to sign in to your account.
+							<br>
+						</p>
+						<form method="post">
+							<div class="form-group">
+								<label class="sr-only" >Username/Email <span class="text-danger">*</span></label>
+								<input type="text" class="form-control" placeholder="Username/Email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only">Password <span class="text-danger">*</span></label>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+							<div class="form-group">
+								<button class="btn btn-block btn-action" type="submit">Sign in</button>
+							</div>
+						</form>
+					</div>
+					<!-- end of sign in -->
+
+					<!-- sign up -->
+					<div role="tabpanel" class="tab-pane" id="do-signup">
+						<h3 class="text-center">Registration</h3>
+						<p class="text-center">
+							<br>
+							A very simple registration form.
+							<br>
+						</p>
+						<form method="post">
+							<div class="form-group">
+								<label class="sr-only" >Your name <span class="text-danger">*</span></label>
+								<input type="text" class="form-control" placeholder="Your name">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" >Email <span class="text-danger">*</span></label>
+								<input type="text" class="form-control" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only">Password <span class="text-danger">*</span></label>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+							<div class="form-group">
+								<button class="btn btn-block btn-action" type="submit">Register</button>
+							</div>
+						</form>
+					</div>
+					<!-- end of sign in -->
+
+					<!-- forgot password -->
+					<div role="tabpanel" class="tab-pane" id="do-forgotpass">
+						<h3 class="text-center">Reset password</h3>
+						<p class="text-center">
+							<br>
+							A confirmation link will be sent to your email.
+							<br>
+						</p>
+						<form method="post">
+							<div class="form-group">
+								<label class="sr-only" >Username/Email <span class="text-danger">*</span></label>
+								<input type="text" class="form-control" placeholder="Username/Email">
+							</div>
+							<div class="form-group">
+								<button class="btn btn-block btn-action" type="submit">Reset password</button>
+							</div>
+						</form>
+					</div>
+					<!-- end of forgot password -->
+				</div>
+				<!-- end of forms container -->
+
+				<!-- the switcher between forms -->
+				<ul class="toggler text-center small list-unstyled" role="tablist">
+					<li role="presentation" class="active">Changed your mind? <a href="#do-signin" aria-controls="do-signin" role="tab" data-toggle="tab">Back to sign in form</a></li>
+					<li role="presentation">Don't have an account? <a href="#do-signup" aria-controls="do-signup" role="tab" data-toggle="tab">Register one now</a></li>
+					<li role="presentation"><a href="#do-forgotpass" aria-controls="do-forgotpass" role="tab" data-toggle="tab">Forgot password?</a></li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- /panel -->
+
+	</section>
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>

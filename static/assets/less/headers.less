@@ -1,0 +1,119 @@
+/*************************************************************************
+
+
+
+                             Headers
+
+
+
+**************************************************************************/
+
+/* Home Header */
+.head {
+	min-height:520px; color:white; font-weight:300;
+
+	@media (max-width: 480px) { min-height:auto; }
+	@media (max-width: 767px) { min-height:420px; }
+}
+
+/* Home header - default */
+.head-default {
+	background:@bg-head url( ../images/bg_header.jpg) no-repeat; background-size:cover; background-attachment: fixed;
+
+	.lead { font-family:@font-head; font-weight: bold; font-size: 45px; margin:220px 0 6px 0; color:@color-head; line-height:1.15em; }
+	.tagline { font-family: @font-text; font-weight: normal; margin-bottom:25px; font-size: 15px; opacity:.85; }
+		.tagline a { color:#fff; }
+
+	.btn { font-size: 14px; }
+	.btn-default {
+		text-shadow: none; background:transparent; border-color: rgba(255,255,255,.5); color:rgba(255,255,255,.85);
+		&:hover, &:focus,
+		&:active, &.active { color:#fff; background: transparent; border-color: #fff; }
+	}
+
+	@media (max-width: 480px) {
+		padding-bottom:20px;
+		.lead { font-size: 22px; margin:130px 0 20px 0; }
+		.btn { font-size: 14px; width:100%; margin-bottom:10px; }
+	}
+
+}
+
+/* Secondary pages header */
+.head-inner {
+	padding:140px 0 80px 0; min-height:350px; font-family:@font-head; background:@bg-head; color:@color-head; background-size:cover;
+	.page-title { font-family:@font-head; color:@color-head; margin:0px 0 10px 0; font-weight: bold; font-size: 45px; line-height: 1.25em; text-transform: uppercase;}
+	.page-lead { margin:0; font-weight: 400; line-height: 1.25em; font-size: 25px; color: @color-head; opacity: 0.8; }
+
+	@media (max-width : 480px) {
+		padding:120px 0 60px 0; min-height:inherit;
+		.page-title { font-size: 30px; }
+		.page-lead { font-size: 18px; }
+	}
+}
+
+/* Simple page title */
+.page-title {
+	font-family:@font-titles; color: @color-contrast; margin:120px 0 10px 0; font-weight: 400; font-size: 72px; line-height: 1.1em; letter-spacing: 2px;
+	span { display: block; font-family: @font-text; font-size: 15px;  line-height: 1.3em; font-weight: 400; opacity: .45; margin-top:5px; letter-spacing: 0; }
+	@media (max-width : 480px) {
+		font-size:48px;
+	}
+}
+
+
+/* Autohide navbar */
+.slideUp { top:-100px; }
+.headroom { -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; -o-transition: all 0.4s ease-out; transition: all 0.4s ease-out; }
+
+
+/* Page-specific headers */
+.page-services .head-inner { background:#999 url( ../images/bg_header_services1.jpg) no-repeat; background-size: cover; }
+.page .head-inner { background:@bg-head url( ../images/bg_header.jpg) no-repeat; background-size:cover; background-attachment: fixed;}
+.page-blog .head-inner,
+.page-single .head-inner { background:@bg-head url( ../images/bg_header_blog.jpg) no-repeat; background-size:cover; background-attachment: fixed;}
+
+
+/*************************************************************************
+
+
+
+                     Landing page header - startup
+
+
+
+**************************************************************************/
+.head-soft {
+	background: #8E9083 url( ../images/bg_header_soft.jpg) no-repeat; background-size:cover; background-attachment: fixed;
+	h1, h2, h3, h4, p { color: #fff; font-family:@font-head; }
+	p { font-size: 15px; line-height: 1.2em;}
+	.info { position:relative; z-index:1;}
+	.lead {
+		font-weight: bold; font-size: 65px; margin:75px 0 6px 0; line-height:50px;
+		span { display: block; color: @color-accent; font-size: 23px; font-weight: normal; }
+	}
+	.intro { font-family: @font-text; font-weight: normal; margin-bottom:25px; font-size: 15px; opacity:.85; }
+	.small { font-size: 0.9em; line-height: 1.2em; text-align: center; text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
+	.text-muted { color:white; opacity: 0.5; }
+
+	form { margin-bottom: 45px; }
+	.form-control { border-color:white; box-shadow:none; margin-right:5px; }
+	.btn { padding-left:40px; padding-right:40px; }
+	@media (max-width: 480px) {
+		background-attachment: scroll;
+		.lead {
+			font-size: 45px; margin:55px 0 20px 0;
+			span { font-size: 20px; line-height: 23px; }
+		}
+		.btn { width:100%; }
+	}
+}
+
+#soft-illustration {
+	text-align: center; width:100%; margin-bottom:-380px; position: relative; z-index: 10;
+	img { .transition(all 0.8s); }
+	&.expand img { margin-bottom:280px; margin-top:-270px; }
+	@media (max-width: 480px) {
+		display: none;
+	}
+}
