@@ -8,14 +8,14 @@
  */
 
 import React from 'react';
-import Register from './Register';
+import Blog from './Blog';
 
 export default {
 
-  path: '/register',
+  path: '/blog',
 
   action() {
-    return <Register />;
+    return <Blog />;
   },
 
 };
