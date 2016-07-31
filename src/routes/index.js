@@ -14,7 +14,8 @@ import App from '../components/App';
 import home from './home';
 import contact from './contact';
 import login from './login';
-import register from './register';
+import projects from './projects';
+import blog from './blog';
 import content from './content';
 import error from './error';
 
@@ -25,10 +26,11 @@ export default {
   children: [
     home,
     contact,
+    projects,
+    blog,
     login,
-    register,
     content,
-    error,
+    error
   ],
 
   async action({ next, render, context }) {

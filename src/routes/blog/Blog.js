@@ -9,22 +9,22 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Login.css';
+import s from './Blog.css';
 
-const title = 'Log In';
+const title = 'Blog Me';
 
-function Login(props, context) {
+function Blog(props, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
       <div className={s.container}>
         <h1>{title}</h1>
-        Bro, you're not logging in yet.
+        <p>There will be a blog here soon. I promise.</p>
       </div>
     </div>
   );
 }
 
-Login.contextTypes = { setTitle: PropTypes.func.isRequired };
+Blog.contextTypes = { setTitle: PropTypes.func.isRequired };
 
-export default withStyles(s)(Login);
+export default withStyles(s)(Blog);
