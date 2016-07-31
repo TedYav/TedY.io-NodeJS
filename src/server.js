@@ -1,3 +1,4 @@
+
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -26,6 +27,7 @@ import schema from './data/schema';
 import routes from './routes';
 import assets from './assets'; // eslint-disable-line import/no-unresolved
 import { port, auth } from './config';
+import defaults from './defaults';
 
 const app = express();
 
@@ -76,7 +78,7 @@ app.get('*', async (req, res, next) => {
         insertCss: (...styles) => {
           styles.forEach(style => css.push(style._getCss())); // eslint-disable-line no-underscore-dangle, max-len
         },
-        setTitle: value => (data.title = value),
+        setTitle: value => (data.title = defaults.titlePrefix + value),
         setMeta: (key, value) => (data[key] = value),
       },
       render(component, status = 200) {
@@ -85,7 +87,7 @@ app.get('*', async (req, res, next) => {
         data.children = ReactDOM.renderToString(component);
         data.style = css.join('');
         return true;
-      },
+      }
     });
 
     const html = ReactDOM.renderToStaticMarkup(<Html {...data} />);

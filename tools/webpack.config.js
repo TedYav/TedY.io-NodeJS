@@ -98,6 +98,15 @@ const config = {
         ],
       },
       {
+        test: /\.less$/,
+        loaders: [
+          'isomorphic-style-loader',
+          `css-loader?${JSON.stringify({ sourceMap: DEBUG, minimize: !DEBUG })}`,
+          'postcss-loader?pack=less',
+          'less-loader',
+        ],
+      },
+      {
         test: /\.json$/,
         loader: 'json-loader',
       },
@@ -185,11 +194,14 @@ const config = {
         require('postcss-selector-not')(),
         // Add vendor prefixes to CSS rules using values from caniuse.com
         // https://github.com/postcss/autoprefixer
-        require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS }),
+        require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS })
       ],
       sass: [
-        require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS }),
+        require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS })
       ],
+      less: [
+        require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS })
+      ]
     };
   },
 };

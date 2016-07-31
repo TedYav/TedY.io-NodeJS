@@ -9,10 +9,8 @@
 
 import React, { Component, PropTypes } from 'react';
 import emptyFunction from 'fbjs/lib/emptyFunction';
-import s from './App.css';
-import Header from '../Header';
-import Feedback from '../Feedback';
-import Footer from '../Footer';
+import s from './App.less';
+// import Header from '../components/Header';
 
 class App extends Component {
 
@@ -51,12 +49,12 @@ class App extends Component {
   }
 
   render() {
+    console.log("RENDERING APP");
+    console.dir(s);
     return !this.props.error ? (
       <div>
-        <Header />
-        {this.props.children}
-        <Feedback />
-        <Footer />
+          Testing!
+          {this.props.children}
       </div>
     ) : this.props.children;
   }

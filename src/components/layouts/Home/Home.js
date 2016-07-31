@@ -9,22 +9,25 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Login.css';
+import s from './Home.css';
 
-const title = 'Log In';
+const title = 'Home';
 
-function Login(props, context) {
+function Home(props, context) {
+  console.log("RENDERING HOME: home.css output coming, then props");
+  console.dir(s);
+  console.dir(props);
   context.setTitle(title);
   return (
-    <div className={s.root}>
-      <div className={s.container}>
-        <h1>{title}</h1>
-        Bro, you're not logging in yet.
-      </div>
+    <div>
+      Testing home!
     </div>
   );
 }
 
-Login.contextTypes = { setTitle: PropTypes.func.isRequired };
+Home.propTypes = {
+  
+};
+Home.contextTypes = { setTitle: PropTypes.func.isRequired};
 
-export default withStyles(s)(Login);
+export default withStyles(s)(Home);

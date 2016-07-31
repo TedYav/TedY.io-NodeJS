@@ -2,8 +2,10 @@
 ## Powered by React Starter Kit
 
 ### To-Do
-1. Move layout code from routes elsewhere. Does not belong.
-2. Divide components into categories: containers, elements, and layouts
+1. ~~Move layout code from routes elsewhere. Does not belong.~~
+2. ~~Divide components into categories: containers, elements, and layouts~~
+3. Make IE 8 fix into component
+4. Bundle styles into different component
 3. Put routes in single file
 4. Convert Home layout to components
 5. Get Home page working

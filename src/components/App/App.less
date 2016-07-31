@@ -1,0 +1,63 @@
+@import "../../styles/mixins.less";
+
+//@import '../../../node_modules/normalize.css/normalize.css';
+
+// Override above constants, add site-specific ones in that file.
+@import "../../styles/variables.less";
+
+// Progressus Bootstrap theme
+@import "../../styles/bootstrap-theme.less";
+
+
+
+/*************************************************************************
+
+
+
+                             Typography
+
+
+
+**************************************************************************/
+body { color: @color-text; background: @bg-body; font-family: @font-text; font-size: @font-size; line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{ font-family:@font-headings; color:@color-headings; margin:30px 0 15px 0; line-height: 1.1; }
+
+h1, .h1 { font-size: 52px; }
+h2, .h2 { font-size: 36px; }
+h3, .h3 { font-size: 28px; margin:20px 0 10px; }
+h4, .h4 { font-size: 22px; margin:20px 0 10px; line-height: 30px; }
+h5, .h5 { font-size: 18px; margin-bottom: 15px; }
+
+@media (max-width: 480px) {
+	h1, .h1 { font-size: 42px; }
+	h2, .h2 { font-size: 26px; }
+	h3, .h3 { font-size: 22px; margin:20px 0 10px; }
+	h4, .h4 { font-size: 18px; margin:20px 0 10px; line-height: 27px; }
+	h5, .h5 { font-size: 16px; margin-bottom: 15px; }
+}
+
+
+.title { font-family: @font-titles; color:@color-titles; margin-bottom:50px; }
+
+p { margin:0 0 20px 0; }
+p:last-child { margin:0; }
+blockquote { font-style: italic; font-family: Georgia; color:lighten(@color-text, 40%); margin:30px 0 30px; }
+label { color: #777; }
+.thin { font-weight:300; }
+.text-muted { color:lighten(@color-text, 40%); }
+.breadcrumb { background:none; padding:0; margin:30px 0 0px 0; }
+ul.list-spaces li{ margin-bottom:10px; }
+a { color: @color-links; }
+a:hover { color: @color-links-hover; }
+
+hr { border-top: 1px solid #ddd; }
+.jumbotron hr { border-top: 1px solid #d3d3d3; }
+.jumbotron.invert hr { border-top: 1px solid #666; }
+
+.color-action { color:@color-action; }
+.color-accent { color:@color-accent; }
+.color-default { color:@color-text; }
+
+

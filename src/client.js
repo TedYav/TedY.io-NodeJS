@@ -20,6 +20,12 @@ import {
   windowScrollX,
   windowScrollY,
 } from './core/DOMUtils';
+import defaults from './defaults';
+
+// import $ from 'jquery';
+// window.$ = window.jQuery = $;
+// import Bootstrap from 'bootstrap';
+// Bootstrap.$ = $;
 
 const context = {
   insertCss: (...styles) => {
@@ -28,7 +34,7 @@ const context = {
       removeCss.forEach(f => f());
     };
   },
-  setTitle: value => (document.title = value),
+  setTitle: value => (document.title = defaults.titlePrefix + value),
   setMeta: (name, content) => {
     // Remove and create a new <meta /> tag in order to make it work
     // with bookmarks in Safari
@@ -44,7 +50,7 @@ const context = {
     document
       .getElementsByTagName('head')[0]
       .appendChild(meta);
-  },
+  }
 };
 
 // Restore the scroll position if it was saved into the state

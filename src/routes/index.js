@@ -12,11 +12,7 @@ import App from '../components/App';
 
 // Child routes
 import home from './home';
-import contact from './contact';
-import login from './login';
-import projects from './projects';
-import blog from './blog';
-import content from './content';
+// import content from './content';
 import error from './error';
 
 export default {
@@ -25,11 +21,6 @@ export default {
 
   children: [
     home,
-    contact,
-    projects,
-    blog,
-    login,
-    content,
     error
   ],
 

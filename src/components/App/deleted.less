@@ -1,0 +1,267 @@
+
+
+/* social profile icons */
+.social-icons {
+	list-style: none; padding-left:0;
+	li { display: inline; }
+	a { display: inline-block; margin:0 5px 5px 0; width:32px; height:32px; background:@color-action; border:2px solid @color-action; border-radius: 50%; text-align: center;}
+	i { color:white; line-height: 29px; }
+	a:hover, a.active {
+		background:@bg-body;
+		i { color: @color-action; }
+	}
+}
+
+
+/*************************************************************************
+
+
+
+                             Helpers
+
+
+
+**************************************************************************/
+.container-full { margin: 0; width: 100%; }
+
+.topspace { margin-top: 30px; }
+.topspace-2x { margin-top: 60px!important; }
+.topspace-3x { margin-top: 90px!important; }
+.topspace-4x { margin-top: 120px!important; }
+.bottomspace { margin-bottom: 30px!important; }
+.bottomspace-2x { margin-bottom: 60px!important; }
+.bottomspace-3x { margin-bottom: 90px!important; }
+.bottomspace-4x { margin-bottom: 120px!important; }
+.topspace-0 { margin-top: 0!important; }
+.bottomspace-0 { margin-bottom: 0!important; }
+
+@media (max-width: 480px) {
+	.bottomspace-xs { margin-bottom:40px; }
+	.bottomspace-xs:last-child { margin-bottom: 0; }
+	.text-center-xs {
+		text-align: center;
+		img { margin:0 auto; }
+	}
+}
+
+
+img { max-width:100%; }
+img.pull-right { margin-left: 10px; }
+img.pull-left { margin-right: 10px; }
+#map { width:100%; height:320px; border-top: 1px solid #ddd;}
+#social { margin-top:50px; margin-bottom:50px; }
+	#social .wrapper { width:340px; margin:0 auto; }
+
+.hideme { display: none; }
+.transparent { background: transparent; }
+.opaque { background: @bg-body; position: relative; z-index:100; }
+
+// Paddings
+.paddingall { padding:30px 40px 0 40px; }
+
+// Toggler (monthly/yearly pricing tab control for example)
+.toggler {
+	li { margin:0 0 7px 0; }
+	li.active { display: none; }
+}
+.inline-toggler {
+	li { display: inline-block; padding:0; margin:0; }
+	li.active { display: none; }
+}
+
+
+
+/* Panels
+******************************/
+.panel-box {
+	background:@bg-accent; border-radius: @radius; border:0 none;
+	.panel-thumbnail{ border:0 none; }
+	.panel-thumbnail img { border-radius: @radius @radius 0 0; }
+}
+
+
+/*************************************************************************
+
+
+
+                        Section-specific styles
+
+
+
+**************************************************************************/
+.section {
+	margin: 40px 0 60px 0;
+	@media (max-width: 480px) { margin: 20px 0 40px 0; }
+}
+
+
+
+/* Section Team
+*******************************/
+.section-team {
+	.photo { border:5px solid darken(@bg-accent, 4%); }
+}
+
+
+
+.section-investors {
+	.photo { border:5px solid darken(@bg-accent, 4%); }
+}
+
+
+/* Section: Testimonials
+******************************/
+.section-testimonials {
+	padding-bottom:100px!important;
+	.carousel-indicators {
+		bottom: -60px; z-index: auto;
+		li { border: none; margin: 1px; background:darken(@bg-accent, 14%); }
+		li.active { background: @color-titles; border: none; width: 10px; height: 10px; margin: 1px; }
+	}
+	.title { margin-bottom: 60px; }
+	.item {
+		.profile {
+			img { border-radius: 50%; border:9px solid rgba(0,0,0,.1); }
+		}
+		.content { }
+		blockquote { font-size: 20px; font-weight: 300; border-left: 0; padding: 0; position: relative; }
+		blockquote .fa { position: absolute; color: darken(@bg-accent, 14%);font-size: 22px; left: -45px; }
+ 		.source { font-weight: bold; }
+ 		.source .title { font-size: 16px; color:@color-text;  }
+ 		@media (max-width : 480px) {
+ 			div { text-align: center; }
+ 		}
+ 	}
+}
+
+
+/* Section: CTA
+******************************/
+.section-cta {
+	.btn-action {
+		top: 50%; margin-top: -29px; padding:16px 0; text-align: center; text-transform: uppercase; font-size: 18px;
+		@media (max-width : 480px) { margin-top:20px;}
+	}
+	h2 {
+		font-size: 16px; font-weight: bold; text-transform: uppercase; margin-bottom: 12px;
+		span { display: block; margin-top: 20px; font-size: 36px; font-weight: 300; text-transform: none; line-height: 40px; }
+	}
+	p { font-size: 18px; line-height: 1.5em; }
+}
+.cta-simple{
+	display: table; background: @bg-accent; width:100%; border-radius: @radius; .box-sizing(border-box);
+	p { display: table-cell; padding: 26px 30px; vertical-align: middle; }
+	p:first-child { font-size: 1.4em; font-weight: 400; -webkit-font-smoothing: antialiased; }
+	p+p { text-align: center;  }
+	&.bordered {
+		border: 1px solid darken(@bg-accent,15%); background: @bg-body;
+		p+p { border-left: 1px solid darken(@bg-accent,15%); background: @bg-accent; }
+	}
+	@media (max-device-width : 480px) {
+		display: block;
+		p { display: block; padding: 20px 30px; text-align: center; }
+		&.bordered p+p { border-left: 0 none; }
+	}
+}
+
+
+/* Section: Sign In
+******************************/
+.page-signin {
+	background:@bg-head url( ../images/bg_header.jpg) no-repeat; background-size:cover; background-attachment: fixed;
+	@media (max-width: 480px) {
+		padding-top:20px;
+	}
+}
+
+.section-signin {
+	position: absolute; top: 50%; left: 50%; margin: -225px 0 0 -180px; width: 360px; height: 450px;
+	@media (max-width: 480px) {
+		position: inherit; top: inherit; left:inherit; margin: 0; width: 100%; height: auto;
+	}
+}
+
+
+/* About */
+.person-social {
+	display: block; margin-top:7px; font-size: 14px; color:lighten(@color-text, 40%);
+	a { color:lighten(@color-text, 40%); text-decoration: none; }
+	a:hover { color:@color-action-hover; }
+}
+.person-about { display: block; margin-top:7px; font-size: 14px; color:@color-accent; font-weight: bold; }
+
+
+/*************************************************************************
+
+
+
+                         Pricing table styles
+
+
+
+**************************************************************************/
+.section-pricing {
+	.price-plan {
+		position: relative; background: @bg-invert; border-radius:@radius;
+		&.most-popular { background: @color-action; }
+		h2 {
+			font-size: 22px; color: #fff; font-weight: 200; text-transform: uppercase; letter-spacing: 4px; text-align: center; padding: 1em 0; margin: 0;
+			&:after { content: ' '; display: block; width: 222px; margin: 20px auto 0; height: 2px; background: white; }
+		}
+		p { color:#fff; color:rgba(255,255,255,.7); }
+
+		.price {
+			padding: 8px 0 30px 0;
+			.inside {
+				font-weight: 100; color: white; text-align: center; line-height: 100px; height: 100px;
+				i, sub, sup { font-size: 24px; position: relative; top: -64px; left: -7px; font-style: normal; }
+				sup { font-size: 27px; letter-spacing: 4px; top: -64px; left: 10px; opacity:.6; }
+				sub { letter-spacing: 4px; top: 0px; left: 0px; opacity:.6; }
+				b { letter-spacing: -6px; font-size:114px; margin-right: -6px; font-weight: 300; margin-left: -5px; color:#fff; }
+				.sub { text-transform: uppercase; font-size: 17px; letter-spacing: 2px; margin-left: -5px; }
+			}
+		}
+
+		.info {
+			background: @bg-accent; padding:20px; min-height:7em;
+			p { color:@color-text; line-height: 1.2em; }
+			ul { margin:30px 0 40px 0; min-height:10em; }
+			li { padding:15px 0; border-top:1px solid #fff; border-bottom: 1px solid darken(@bg-accent, 7%); line-height: 1.2em; text-align: center; }
+			li:last-child { border-bottom: none; padding-bottom:0; }
+			li:first-child { border-top: none;}
+		}
+	}
+}
+
+
+/* Section "features" and similar ones, with icons on the side
+**************************************************************************/
+.info-icons-h {
+	figure {
+		position:relative;
+		.icon { position: absolute; font-size: 24px; top:0px; left:30px; }
+		.text{ margin:0 0 0 75px; }
+		.caption { text-transform: uppercase; font-size: 18px; margin:0 0 15px 0; padding:0 0 15px 0; font-weight: bold; letter-spacing: 2px; opacity: .75; position: relative; }
+		.caption:after { content: ""; position: absolute; bottom: 0; display: block; border-bottom: 1px dotted @color-action; width: 50px; }
+	}
+	figure.text-right {
+		.icon { right:30px; left:auto; }
+		.text{ margin:0 75px 0 0; }
+		.caption:after { right:0; left:auto; }
+	}
+
+	@media (max-device-width : 480px) {
+		figure {
+			text-align: center!important; margin-bottom:30px;
+			&:last-child { margin-bottom:0; }
+			.icon { position: inherit; top:auto; left:auto; width:100%; text-align: center; }
+			.text{ margin:0; }
+			.caption { font-size: 16px; text-align: center; margin:10px 0; padding:0; position: inherit; }
+			.caption:after { display: none; }
+		}
+		figure.text-right {
+			.icon { right:auto; left:auto; }
+			.text{ margin:0; }
+		}
+	}
+}
