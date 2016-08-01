@@ -9,8 +9,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import emptyFunction from 'fbjs/lib/emptyFunction';
-import s from './App.less';
-// import Header from '../components/Header';
+import styles from '../../styles/main.less';
 
 class App extends Component {
 
@@ -41,7 +40,7 @@ class App extends Component {
 
   componentWillMount() {
     const { insertCss } = this.props.context;
-    this.removeCss = insertCss(s);
+    this.removeCss = insertCss(styles);
   }
 
   componentWillUnmount() {
@@ -49,14 +48,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("RENDERING APP");
-    console.dir(s);
-    return !this.props.error ? (
-      <div>
-          Testing!
-          {this.props.children}
-      </div>
-    ) : this.props.children;
+    return this.props.children;
   }
 
 }

@@ -8,13 +8,17 @@
  */
 
 import React from 'react';
+import classnames from 'classnames';
+import NavbarBrand from '../NavbarBrand';
 
-const Header = () => {
+const Navbar = () => {
   return (
-    <h1>
-      Why is the header rendering??
-    </h1>
+    <div className={classnames('navbar', 'navbar-dual', 'navbar-inverse', 'navbar-fixed-top')}>
+      <div className="container">
+        <NavbarBrand />
+      </div>
+    </div>
   );
 }
 
-export default Header;
+export default Navbar;

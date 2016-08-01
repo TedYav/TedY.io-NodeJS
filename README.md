@@ -2,11 +2,10 @@
 ## Powered by React Starter Kit
 
 ### To-Do
-1. ~~Move layout code from routes elsewhere. Does not belong.~~
-2. ~~Divide components into categories: containers, elements, and layouts~~
+
 3. Make IE 8 fix into component
-4. Bundle styles into different component
 3. Put routes in single file
+4 Enable Headroom
 4. Convert Home layout to components
 5. Get Home page working
 6. Convert Projects page to components
@@ -22,5 +21,7 @@
 11. Abstract away redux and mongo components
 14. Prettify this file
 15. Clean up packages
+16. Move styles to separate file or minify
+17. Package styles individually with components
 16. Deploy
 13. I can really write whatever numbers I want here can't I?

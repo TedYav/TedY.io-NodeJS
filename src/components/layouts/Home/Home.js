@@ -8,26 +8,21 @@
  */
 
 import React, { PropTypes } from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Home.css';
+import Navbar from '../../elements/Navbar';
+import Header from '../../elements/Header';
 
 const title = 'Home';
 
-function Home(props, context) {
-  console.log("RENDERING HOME: home.css output coming, then props");
-  console.dir(s);
-  console.dir(props);
+const Home = (props, context) => {
   context.setTitle(title);
   return (
     <div>
-      Testing home!
+      <Navbar activePage="Home" />
+      
     </div>
   );
 }
 
-Home.propTypes = {
-  
-};
 Home.contextTypes = { setTitle: PropTypes.func.isRequired};
 
-export default withStyles(s)(Home);
+export default Home;

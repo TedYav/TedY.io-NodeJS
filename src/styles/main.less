@@ -1,12 +1,12 @@
-@import "../../styles/mixins.less";
+@import "./mixins.less";
 
 //@import '../../../node_modules/normalize.css/normalize.css';
 
 // Override above constants, add site-specific ones in that file.
-@import "../../styles/variables.less";
+@import "./variables.less";
 
 // Progressus Bootstrap theme
-@import "../../styles/bootstrap-theme.less";
+@import "./bootstrap-theme.less";
 
 
 
@@ -23,6 +23,10 @@ body { color: @color-text; background: @bg-body; font-family: @font-text; font-s
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{ font-family:@font-headings; color:@color-headings; margin:30px 0 15px 0; line-height: 1.1; }
+
+.testClass{
+	color: red !important;
+}
 
 h1, .h1 { font-size: 52px; }
 h2, .h2 { font-size: 36px; }

@@ -34,7 +34,6 @@ function Html({ title, style, script, children }) {
 
 Html.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   style: PropTypes.string.isRequired,
   script: PropTypes.string,
   children: PropTypes.string,

@@ -13,6 +13,7 @@ import extend from 'extend';
 import AssetsPlugin from 'assets-webpack-plugin';
 
 const DEBUG = !process.argv.includes('--release');
+console.log("DEBUG " + DEBUG);
 const VERBOSE = process.argv.includes('--verbose');
 const AUTOPREFIXER_BROWSERS = [
   'Android 2.3',
@@ -85,7 +86,7 @@ const config = {
             // CSS Nano http://cssnano.co/options/
             minimize: !DEBUG,
           })}`,
-          'postcss-loader?pack=default',
+          'postcss-loader?pack=default'
         ],
       },
       {
@@ -94,7 +95,7 @@ const config = {
           'isomorphic-style-loader',
           `css-loader?${JSON.stringify({ sourceMap: DEBUG, minimize: !DEBUG })}`,
           'postcss-loader?pack=sass',
-          'sass-loader',
+          'sass-loader'
         ],
       },
       {
@@ -103,7 +104,7 @@ const config = {
           'isomorphic-style-loader',
           `css-loader?${JSON.stringify({ sourceMap: DEBUG, minimize: !DEBUG })}`,
           'postcss-loader?pack=less',
-          'less-loader',
+          'less-loader'
         ],
       },
       {

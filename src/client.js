@@ -27,6 +27,12 @@ import defaults from './defaults';
 // import Bootstrap from 'bootstrap';
 // Bootstrap.$ = $;
 
+global.jQuery = require('jquery');
+global.$ = jQuery;
+const
+      bootstrap = require('bootstrap'),
+      bootstrapDropdown = require('bootstrap-hover-dropdown');
+
 const context = {
   insertCss: (...styles) => {
     const removeCss = styles.map(style => style._insertCss()); // eslint-disable-line no-underscore-dangle, max-len

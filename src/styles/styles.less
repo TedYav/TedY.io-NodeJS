@@ -1,3 +1,112 @@
+@import "mixins.less";
+
+// Color Scheme
+@bg-body                 : #fff;
+@bg-accent               : #f6f7f8;
+@bg-accent-inverted      : #211F25;
+@bg-medium               : #666;
+@bg-invert               : #333;
+@bg-head                 : #1C2A42;
+
+@color-text              : #333;
+@color-muted             : #454545;
+@color-contrast          : #151515;
+@color-invert            : #f0f0f0;
+@color-accent            : #3A89C9;
+
+@color-action            : #DA4453;
+@color-action-hover      : #E72B3E;
+@color-success           : #94BA65;
+@color-info              : #9CC4E4;
+@color-warning           : #F0AD4E;
+@color-danger            : #EB3729;
+
+@color-head              : #fff;
+@color-titles            : #454545;
+@color-headings          : #454545;
+@color-links             : @color-action;
+@color-links-hover       : @color-action-hover;
+
+// Fonts
+@font-size               : 15px;
+
+@font-text               : helvetica, "Helvetica Neue", "Open Sans", Arial, sans-serif;
+@font-nav                : "Open sans", helvetica, "Helvetica Neue", arial;
+@font-head               : Raleway, "Open sans", helvetica, "Helvetica Neue", arial;
+
+@font-titles             : Raleway, "Open sans", helvetica, arial;
+@font-headings           : "Open sans", helvetica, "Helvetica Neue", arial;
+
+// Various
+@radius                  : 3px;
+
+// Override above constants, add site-specific ones in that file.
+@import "constants.less";
+
+// Progressus Bootstrap theme
+@import "bootstrap-theme.less";
+
+// Page-specific styles
+@import "portfolio.less";
+@import "blog.less";
+
+// Headers
+@import "headers.less";
+
+// Your site-specific styles
+// Put all your custom styles in that file, try to keep styles.less intact.
+@import "custom.less";
+
+
+/*************************************************************************
+
+
+
+                             Typography
+
+
+
+**************************************************************************/
+body { color: @color-text; background: @bg-body; font-family: @font-text; font-size: @font-size; line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{ font-family:@font-headings; color:@color-headings; margin:30px 0 15px 0; line-height: 1.1; }
+
+h1, .h1 { font-size: 52px; }
+h2, .h2 { font-size: 36px; }
+h3, .h3 { font-size: 28px; margin:20px 0 10px; }
+h4, .h4 { font-size: 22px; margin:20px 0 10px; line-height: 30px; }
+h5, .h5 { font-size: 18px; margin-bottom: 15px; }
+
+@media (max-width: 480px) {
+	h1, .h1 { font-size: 42px; }
+	h2, .h2 { font-size: 26px; }
+	h3, .h3 { font-size: 22px; margin:20px 0 10px; }
+	h4, .h4 { font-size: 18px; margin:20px 0 10px; line-height: 27px; }
+	h5, .h5 { font-size: 16px; margin-bottom: 15px; }
+}
+
+
+.title { font-family: @font-titles; color:@color-titles; margin-bottom:50px; }
+
+p { margin:0 0 20px 0; }
+p:last-child { margin:0; }
+blockquote { font-style: italic; font-family: Georgia; color:lighten(@color-text, 40%); margin:30px 0 30px; }
+label { color: #777; }
+.thin { font-weight:300; }
+.text-muted { color:lighten(@color-text, 40%); }
+.breadcrumb { background:none; padding:0; margin:30px 0 0px 0; }
+ul.list-spaces li{ margin-bottom:10px; }
+a { color: @color-links; }
+a:hover { color: @color-links-hover; }
+
+hr { border-top: 1px solid #ddd; }
+.jumbotron hr { border-top: 1px solid #d3d3d3; }
+.jumbotron.invert hr { border-top: 1px solid #666; }
+
+.color-action { color:@color-action; }
+.color-accent { color:@color-accent; }
+.color-default { color:@color-text; }
 
 
 /* social profile icons */
@@ -264,4 +373,40 @@ img.pull-left { margin-right: 10px; }
 			.text{ margin:0; }
 		}
 	}
+}
+
+
+
+/*************************************************************************
+
+
+
+                            Footer styles
+
+
+
+**************************************************************************/
+.footer1 {
+	background: #232323; padding: 30px 0 0 0; font-size: 12px; color: #999;
+	a { color: #ccc; }
+	a:hover { color: #fff; }
+	.widget { margin-bottom:30px; }
+	.widget-title { font-size: 17px; font-weight: bold; color: #ccc; margin: 0 0 20px; }
+	.entry-meta {
+		border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; margin: 0 0 35px 0; padding: 2px 0; color: #888888; font-size: 12px; font-size: 0.75rem;
+		a { color: #333333; }
+		.meta-in { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px 0; }
+	}
+	.follow-me-icons { font-size:30px; }
+		.follow-me-icons i { float:left; margin:0 10px 0 0; }
+}
+
+.footer2 {
+	background: #191919; padding: 15px 0; color: #777; font-size: 12px;
+	a { color: #aaa; }
+	a:hover { color: #fff; }
+	p { margin: 0; }
+
+	.widget-simplenav { margin-left:-5px; }
+	.widget-simplenav a{ margin:0 5px; }
 }
