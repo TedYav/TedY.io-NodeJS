@@ -10,12 +10,16 @@
 import React from 'react';
 import cx from 'classnames';
 
-const Header = () => {
+const Header = ({children, classes = ['head', 'head-default'], bigText, littleText}) => {
   return (
-    <header className={cx('head','head-default')}>
+    <header className={cx(classes)}>
 		<div className="container">
-			<h1 className={cx('lead', 'text-center')}>TeomanDavid.com</h1>
-			<p className={cx('tagline', 'text-center')}>The personal website of Teoman (Ted) David Yavuzkurt.</p>
+			
+			<div className={cx('text-center', 'topspace-2x')}>
+				{children}
+				<h1 className={cx('lead', 'text-center', 'topspace-0')}>{bigText}</h1>
+				<p className={cx('tagline', 'text-center')}>{littleText}</p>	
+			</div>
 		</div>
 	</header>
   );
