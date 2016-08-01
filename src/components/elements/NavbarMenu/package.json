@@ -1,0 +1,6 @@
+{
+	"name" : "NavbarMenu",
+	"version" : "0.0.0",
+	"private" : true,
+	"main" : "./NavbarMenu.js"
+}

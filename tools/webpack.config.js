@@ -13,7 +13,7 @@ import extend from 'extend';
 import AssetsPlugin from 'assets-webpack-plugin';
 
 const DEBUG = !process.argv.includes('--release');
-console.log("DEBUG " + DEBUG);
+console.log(`Webpack Running in ${DEBUG ? "DEVELOPMENT" : "PRODUCTION "} mode`);
 const VERBOSE = process.argv.includes('--verbose');
 const AUTOPREFIXER_BROWSERS = [
   'Android 2.3',

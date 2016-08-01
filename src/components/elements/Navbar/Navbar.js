@@ -10,15 +10,21 @@
 import React from 'react';
 import classnames from 'classnames';
 import NavbarBrand from '../NavbarBrand';
+import NavbarMenu from '../NavbarMenu';
 
-const Navbar = () => {
+const Navbar = ({currentPage}) => {
   return (
     <div className={classnames('navbar', 'navbar-dual', 'navbar-inverse', 'navbar-fixed-top')}>
       <div className="container">
         <NavbarBrand />
+        <NavbarMenu currentPage={currentPage} />
       </div>
     </div>
   );
+}
+
+Navbar.propTypes = {
+	currentPage : React.PropTypes.string
 }
 
 export default Navbar;

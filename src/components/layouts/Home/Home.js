@@ -17,8 +17,7 @@ const Home = (props, context) => {
   context.setTitle(title);
   return (
     <div>
-      <Navbar activePage="Home" />
-      
+      <Navbar currentPage="Home" />
     </div>
   );
 }

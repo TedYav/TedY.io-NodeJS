@@ -23,10 +23,10 @@ function Html({ title, style, script, children }) {
 
         <style id="css" dangerouslySetInnerHTML={{ __html: style }} />
         
+        <script async={true} src={script} />
       </head>
       <body>
         <div id="app" className={bodyClass} dangerouslySetInnerHTML={{ __html: children }} />
-        {script && <script src={script} />}
       </body>
     </html>
   );
