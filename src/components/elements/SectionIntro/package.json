@@ -1,6 +1,0 @@
-{
-	"name" : "SectionIntro",
-	"version" : "0.0.0",
-	"private" : true,
-	"main" : "./SectionIntro.js"
-}

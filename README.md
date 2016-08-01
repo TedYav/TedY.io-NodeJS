@@ -6,6 +6,7 @@
 3. Make IE 8 fix into component
 3. Put routes in single file
 4 Enable Headroom
+5. Add particles.js
 4. Convert Home layout to components
 5. Get Home page working
 6. Convert Projects page to components
