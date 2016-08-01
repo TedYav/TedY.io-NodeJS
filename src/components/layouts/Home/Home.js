@@ -18,20 +18,33 @@ const title = 'Home';
 
 const features = [
 	{
-		'title' : 'Code',
-		'description' : 'I love to write code and deal with all things computer.',
-		'image' : 'code.png'
+		title : '',
+		description : '',
+		image : 'tech-logos/react.png',
+		imageAlt: 'ReactJS',
+		imageUrl: ''
 	},
 	{
-		'title' : 'Write',
-		'description' : 'I love to write code and deal with all things computer.',
-		'image' : 'write.png'
+		title : '',
+		description : '',
+		image : 'tech-logos/redux.png',
+		imageAlt: 'Redux',
+		imageUrl: ''
 	},
 	{
-		'title' : 'Lead',
-		'description' : 'I love to write code and deal with all things computer.',
-		'image' : 'lead.png'
+		title : '',
+		description : '',
+		image : 'tech-logos/nodejs.png',
+		imageAlt: 'NodeJS',
+		imageUrl: ''
 	},
+	{
+		title : '',
+		description : '',
+		image : 'tech-logos/mongodb.png',
+		imageAlt: 'MongoDB',
+		imageUrl: ''
+	}
 ]
 
 const Home = (props, context) => {
@@ -43,7 +56,7 @@ const Home = (props, context) => {
       	<CirclePhoto imageName="ted-mini.jpg" imageAlt="Ted Yavuzkurt" />
       </Header>
       <SectionIntro bigText="A little bit about me." littleText="My name is Ted and I write code and this is some cool stuff here! All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy." />
-      <SectionFeatures bigText="Here's what I do." littleText="Click each link to learn more." features={[]} />
+      <SectionFeatures hover={true} numPerRow="6" bigText="Here's what I do." littleText="Click each link to learn more." features={features} />
     </div>
   );
 }

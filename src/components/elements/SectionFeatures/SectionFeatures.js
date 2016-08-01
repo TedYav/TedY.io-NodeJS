@@ -1,7 +1,10 @@
 import React from 'react';
 import cx from "classnames";
+import Image from '../Image';
 
-const SectionFeatures = ({bigText, littleText, features}) =>{
+const SectionFeatures = ({bigText, littleText, features, numPerRow=4, hover=false}) =>{
+	let medClass = "col-md-" + Math.round(12/numPerRow);
+
 	return (
 		<section className={cx('section', 'jumbotron')}>
 			<div className="container">
@@ -10,7 +13,17 @@ const SectionFeatures = ({bigText, littleText, features}) =>{
 				</h3>
 
 				<div className={cx('row', 'topspace-2x')}>
-					Nothing to see here yet!
+					{features.map((feature, i) => {
+						return(
+							<figure key={i} className={cx(medClass, 'col-sm-6', 'bottomspace-xs', 'text-center')}>
+								<i className={cx('fa', 'fa-4x', 'color-accent')}>
+									<Image imageName={feature.image} imageAlt={feature.imageAlt} hoverSwap={true} />
+								</i>
+								<h4>{feature.title}</h4>
+								<p className="text-center">{feature.description}</p>
+							</figure>
+						)
+					})}
 				</div>
 			</div>
 		</section>
