@@ -14,7 +14,7 @@ import NavbarMenu from '../NavbarMenu';
 
 const Navbar = ({currentPage}) => {
   return (
-    <div className={classnames('navbar', 'navbar-dual', 'navbar-inverse', 'navbar-fixed-top')}>
+    <div className={classnames('navbar', 'navbar-dual', 'navbar-inverse', 'navbar-fixed-top', 'headroom', 'ontop-now')}>
       <div className="container">
         <NavbarBrand />
         <NavbarMenu currentPage={currentPage} />

@@ -9,7 +9,9 @@
 
 import React, { Component, PropTypes } from 'react';
 import emptyFunction from 'fbjs/lib/emptyFunction';
-import styles from '../../styles/main.less';
+import s from '../../styles/styles.less';
+
+// import s from '../../styles/test.less';
 
 class App extends Component {
 
@@ -40,7 +42,7 @@ class App extends Component {
 
   componentWillMount() {
     const { insertCss } = this.props.context;
-    this.removeCss = insertCss(styles);
+    this.removeCss = insertCss(s);
   }
 
   componentWillUnmount() {

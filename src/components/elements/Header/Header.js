@@ -8,12 +8,16 @@
  */
 
 import React from 'react';
+import cx from 'classnames';
 
 const Header = () => {
   return (
-    <h1>
-      Why is the header rendering??
-    </h1>
+    <header className={cx('head','head-default')}>
+		<div className="container">
+			<h1 className={cx('lead', 'text-center')}>TeomanDavid.com</h1>
+			<p className={cx('tagline', 'text-center')}>The personal website of Teoman (Ted) David Yavuzkurt.</p>
+		</div>
+	</header>
   );
 }
 

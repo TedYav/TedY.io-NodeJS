@@ -10,14 +10,19 @@
 import React, { PropTypes } from 'react';
 import Navbar from '../../elements/Navbar';
 import Header from '../../elements/Header';
+import SectionIntro from '../../elements/SectionIntro';
+import SectionFeatures from '../../elements/SectionFeatures';
 
 const title = 'Home';
 
 const Home = (props, context) => {
   context.setTitle(title);
   return (
-    <div>
+    <div className="page-home">
       <Navbar currentPage="Home" />
+      <Header />
+      <SectionIntro bigText="I make websites" littleText="My name is Ted and I write code and this is some cool stuff here!" />
+      <SectionFeatures bigText="Here's what I do." littleText="Click each link to learn more." features={[]} />
     </div>
   );
 }

@@ -26,12 +26,17 @@ import defaults from './defaults';
 // window.$ = window.jQuery = $;
 // import Bootstrap from 'bootstrap';
 // Bootstrap.$ = $;
+// headroom and such --> for now
 
 global.jQuery = require('jquery');
 global.$ = jQuery;
 const
       bootstrap = require('bootstrap'),
-      bootstrapDropdown = require('bootstrap-hover-dropdown');
+      bootstrapDropdown = require('bootstrap-hover-dropdown'),
+      headroom = require('./includes/headroom.min.js'),
+      jQueryHeadroom = require('./includes/jQuery.headroom.min.js'),
+      headroomTemplate = require('./includes/template.js');
+
 
 const context = {
   insertCss: (...styles) => {

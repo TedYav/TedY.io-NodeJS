@@ -39,5 +39,7 @@ node_modules
 # Bower
 bower_components/
 
+static
+
 #OS X
 *.DS_STORE*

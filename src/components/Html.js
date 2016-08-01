@@ -3,7 +3,6 @@ import { analytics } from '../config';
 import defaults from '../defaults';
 
 function Html({ title, style, script, children }) {
-  let bodyClass = "page-home";
   return (
     <html className="no-js" lang="en">
       <head>
@@ -14,6 +13,7 @@ function Html({ title, style, script, children }) {
         <meta name="author" content={defaults.siteAuthor} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <link rel="shortcut icon" href="images/gt_favicon.png" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
 
@@ -26,7 +26,7 @@ function Html({ title, style, script, children }) {
         <script async={true} src={script} />
       </head>
       <body>
-        <div id="app" className={bodyClass} dangerouslySetInnerHTML={{ __html: children }} />
+        <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
       </body>
     </html>
   );
