@@ -2,7 +2,7 @@ import React from 'react';
 import cx from "classnames";
 import Image from '../Image';
 
-const SectionFeatures = ({bigText, littleText, features, numPerRow=4, hover=false}) =>{
+const SectionFeatures = ({bigText='', littleText='', features, numPerRow=4}) =>{
 	let medClass = "col-md-" + Math.round(12/numPerRow);
 
 	return (
@@ -17,7 +17,7 @@ const SectionFeatures = ({bigText, littleText, features, numPerRow=4, hover=fals
 						return(
 							<figure key={i} className={cx(medClass, 'col-sm-6', 'bottomspace-xs', 'text-center')}>
 								<i className={cx('fa', 'fa-4x', 'color-accent')}>
-									<Image imageName={feature.image} imageAlt={feature.imageAlt} hoverSwap={true} />
+									<Image {...feature.image} />
 								</i>
 								<h4>{feature.title}</h4>
 								<p className="text-center">{feature.description}</p>

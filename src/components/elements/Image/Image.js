@@ -3,11 +3,11 @@ import cx from 'classnames';
 
 const Image = React.createClass({
 	getInitialState: function() {
-		let {hoverSwap, imageName} = this.props;
-		let state = {hover: false, imageUrl: require(`../../../public/images/${imageName}`)};
+		let {hoverSwap, name} = this.props;
+		let state = {hover: false, imageUrl: require(`../../../public/images/${name}`)};
 		if(hoverSwap){
-			let extension = imageName.substring(imageName.length - 4, imageName.length);
-			let baseName = imageName.substring(0, imageName.length - 4);
+			let extension = name.substring(name.length - 4, name.length);
+			let baseName = name.substring(0, name.length - 4);
 			state.hoverUrl = require(`../../../public/images/${baseName}-hover${extension}`);
 		}
 		return state;
@@ -22,9 +22,9 @@ const Image = React.createClass({
 	},
 
 	render: function() {
-		let {imageName, hoverSwap=false, imageAlt='', options={}} = this.props;
+		let {props = {}, hoverSwap} = this.props;
 		return (
-			<img src={(this.state.hover && hoverSwap ? this.state.hoverUrl : this.state.imageUrl)} alt={imageAlt} onMouseOver={(hoverSwap ? this.mouseOver : false)} onMouseOut={(hoverSwap ? this.mouseOut : false)} />
+			<img src={(this.state.hover && hoverSwap ? this.state.hoverUrl : this.state.imageUrl)} {...props} onMouseOver={(hoverSwap ? this.mouseOver : false)} onMouseOut={(hoverSwap ? this.mouseOut : false)} />
 		);
 	}
 });

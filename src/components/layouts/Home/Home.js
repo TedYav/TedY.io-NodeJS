@@ -18,32 +18,44 @@ const title = 'Home';
 
 const features = [
 	{
-		title : '',
-		description : '',
-		image : 'tech-logos/react.png',
-		imageAlt: 'ReactJS',
-		imageUrl: ''
+		image : {
+			name: 'tech-logos/react.png',
+			hoverSwap: true,
+			props: {
+			alt: 'ReactJS',
+			title: 'ReactJS',
+			}
+		}
 	},
 	{
-		title : '',
-		description : '',
-		image : 'tech-logos/redux.png',
-		imageAlt: 'Redux',
-		imageUrl: ''
+		image : {
+			name: 'tech-logos/redux.png',
+			hoverSwap: true,
+			props: {
+			alt: 'Redux',
+			title: 'Redux',
+			}
+		}
 	},
 	{
-		title : '',
-		description : '',
-		image : 'tech-logos/nodejs.png',
-		imageAlt: 'NodeJS',
-		imageUrl: ''
+		image : {
+			name: 'tech-logos/nodejs.png',
+			hoverSwap: true,
+			props: {
+			alt: 'NodeJS',
+			title: 'NodeJS',
+			}
+		}
 	},
 	{
-		title : '',
-		description : '',
-		image : 'tech-logos/mongodb.png',
-		imageAlt: 'MongoDB',
-		imageUrl: ''
+		image : {
+			name: 'tech-logos/mongodb.png',
+			hoverSwap: true,
+			props: {
+			alt: 'MongoDB',
+			title: 'MongoDB',
+			}
+		}
 	}
 ]
 
@@ -56,7 +68,7 @@ const Home = (props, context) => {
       	<CirclePhoto imageName="ted-mini.jpg" imageAlt="Ted Yavuzkurt" />
       </Header>
       <SectionIntro bigText="A little bit about me." littleText="My name is Ted and I write code and this is some cool stuff here! All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy. All work and no play makes Ted a dull boy." />
-      <SectionFeatures hover={true} numPerRow="6" bigText="Here's what I do." littleText="Click each link to learn more." features={features} />
+      <SectionFeatures numPerRow="6" bigText="Here's what I do." littleText="Click each link to learn more." features={features} />
     </div>
   );
 }
