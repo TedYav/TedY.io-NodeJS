@@ -15,6 +15,7 @@ import Features from '../../elements/Features';
 import CirclePhoto from '../../elements/CirclePhoto';
 import Contact from '../../elements/Contact';
 import Section from '../../elements/Section';
+import jQuery from 'jQuery';
 
 const title = 'Home';
 
@@ -109,6 +110,15 @@ const data = {
 
 const Home = (props, context) => {
   context.setTitle(title);
+  if(process.env.BROWSER){
+  	jQuery(document).ready(function(){
+  		if(document.getElementById('particles-js')){
+        particlesJS.load('particles-js', 'config/particlesjs.json', function() {
+          console.log('callback - particles.js config loaded');
+        });
+      }
+  	});
+  }
   return (
     <div className="page-home">
       <Navbar currentPage="Home" />
@@ -118,6 +128,7 @@ const Home = (props, context) => {
       <Intro bigText={data.introText} littleText={data.introContent} />
       <Features numPerRow="6" bigText={data.featureCaption} features={data.features} />
       <Contact />
+	  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" />
     </div>
   );
 }
