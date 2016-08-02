@@ -3,9 +3,9 @@
 
 ### To-Do
 
+1. Add proptypes
 3. Make IE 8 fix into component
 3. Put routes in single file
-4 Enable Headroom
 5. Add particles.js
 4. Convert Home layout to components
 5. Get Home page working
@@ -26,3 +26,6 @@
 17. Package styles individually with components
 16. Deploy
 13. I can really write whatever numbers I want here can't I?
+
+### Done
+1. ~~Enable Headroom~~
