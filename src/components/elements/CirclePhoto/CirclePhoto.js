@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
 
-const CirclePhoto = ({imageName, attributes={}, extraClasses = []}) => {
-	extraClasses.push('circle-image');
+const CirclePhoto = ({imageName, attributes={}, classNames = []}) => {
+	classNames.push('circle-image');
 	let imageUrl = require(`../../../public/images/${imageName}`);
 	return (
-		<div className={cx(extraClasses)}>
+		<div className={cx(classNames)}>
 			<img src={imageUrl} {...attributes} />
 		</div>
 	);

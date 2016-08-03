@@ -12,12 +12,12 @@ import cx from 'classnames';
 
 const Header = ({children, classes = ['head', 'head-default'], bigText, littleText}) => {
   return (
-    <header className={cx(classes)} id="particles-js">
+    <header className={cx(classes)} id="header">
 		<div className="container">
 			<div className={cx('text-center', 'topspace-2x')}>
 				{children}
-				<h1 className={cx('lead', 'text-center', 'topspace-0')}>{bigText}</h1>
-				<p className={cx('tagline', 'text-center')}>{littleText}</p>	
+				<h1 className={cx('lead', 'text-center', 'topspace-0', 'on-top')}>{bigText}</h1>
+				<p className={cx('tagline', 'text-center', 'on-top')}>{littleText}</p>	
 			</div>
 		</div>
 	</header>

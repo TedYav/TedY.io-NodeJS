@@ -114,7 +114,7 @@ const Home = (props, context) => {
   	jQuery(document).ready(function(){
   		if(document.getElementById('particles-js')){
         particlesJS.load('particles-js', 'config/particlesjs.json', function() {
-          console.log('callback - particles.js config loaded');
+          console.log("ParticlesJS Loaded");
         });
       }
   	});
@@ -122,8 +122,9 @@ const Home = (props, context) => {
   return (
     <div className="page-home">
       <Navbar currentPage="Home" />
-      <Header classes={['head-skinny', 'head-default']} bigText={data.headerText} littleText={data.headerSubtext}>
-      	<CirclePhoto imageName={data.photo} attributes={data.photoAttributes} />
+      <Header classes={['head-skinny', 'head-default', 'head-particles']} bigText={data.headerText} littleText={data.headerSubtext}>
+      	<CirclePhoto imageName={data.photo} attributes={data.photoAttributes} classNames={['on-top']} />
+	  	<div id="particles-js" />	
       </Header>
       <Intro bigText={data.introText} littleText={data.introContent} />
       <Features numPerRow="6" bigText={data.featureCaption} features={data.features} />
