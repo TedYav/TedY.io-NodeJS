@@ -21,4 +21,3 @@
 14. Prettify this file
 15. Clean up packages
 16. Deploy
-13. I can really write whatever numbers I want here can't I?
