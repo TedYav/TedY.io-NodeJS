@@ -21,7 +21,7 @@ const title = 'Home';
 
 const data = {
 	headerText: "Hi, I'm Ted.",
-	headerSubtext: "Software Developer. Innovator. Future Social Entrepreneur.",
+	headerSubtext: "Software Development. Project Management. Social Entrepreneurship.",
 	photo: "ted-mini.jpg",
 	photoAttributes: {alt: "Ted Yavuzkurt"},
 	introText: "A little bit about me.",

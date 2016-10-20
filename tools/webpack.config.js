@@ -11,6 +11,7 @@ import path from 'path';
 import webpack from 'webpack';
 import extend from 'extend';
 import AssetsPlugin from 'assets-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 const DEBUG = !process.argv.includes('--release');
 console.log(`Webpack Running in ${DEBUG ? "DEVELOPMENT" : "PRODUCTION "} mode`);
@@ -109,7 +110,7 @@ const config = {
       },
       {
         test: /\.json$/,
-        loader: 'json-loader',
+        loader: 'file-loader',
       },
       {
         test: /\.txt$/,
@@ -235,6 +236,14 @@ const clientConfig = extend(true, {}, config, {
       processOutput: x => `module.exports = ${JSON.stringify(x)};`,
     }),
 
+    // copy static files to output dir
+    new CopyPlugin([
+      {
+          from: '../src/static/**/*',
+          to: 'public'
+      }
+    ]),
+
     // Assign the module and chunk ids by occurrence count
     // Consistent ordering of modules required if using any hashing ([hash] or [chunkhash])
     // https://webpack.github.io/docs/list-of-plugins.html#occurrenceorderplugin
@@ -292,6 +301,13 @@ const serverConfig = extend(true, {}, config, {
   ],
 
   plugins: [
+
+  new CopyPlugin([
+      {
+          from: '../src/static/**/*',
+          to: 'public'
+      }
+    ]),
 
     // Define free variables
     // https://webpack.github.io/docs/list-of-plugins.html#defineplugin

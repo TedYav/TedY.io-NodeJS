@@ -1,6 +1,6 @@
 const defaults = {
 	titlePrefix: "TeomanDavid.com :: ",
-	siteDescription: "Personal webfolio of Teoman (Ted) David Yavuzkurt: Developer. Photographer. Aspiring Social Entrepreneur.",
+	siteDescription: "Personal webfolio of Teoman (Ted) David Yavuzkurt: Developer. Project Manager. Aspiring Social Entrepreneur.",
 	siteAuthor: "Teoman (Ted) David Yavuzkurt",
 	htmlComments: `
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
